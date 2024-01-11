@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using React Libraries</title>
+   
+  </head>
+  <body>
+    <div id="react-container1"></div>
+    <div id="react-container2"></div>
+    <div id="react-container3"></div>
+    <div id="react-container"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </body>
+  <script type="text/babel">
+    class ReactContainer extends React.Component{
+    // JSX tags
+    // JSX there should be one parent element
+      render(){
+          return (
+          <div>Hello! Welcome to Kalvium   
+             <div>Lets rock and roll - This is babel</div>
+         </div> )
+      };  
+  }
+
+const container = document.getElementById('react-container');
+// Direclty pass the component to render
+ReactDOM.render(<ReactContainer/>,container); 
+  </script>
+  
+</html>
